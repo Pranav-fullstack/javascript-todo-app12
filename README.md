@@ -1,2 +1,1 @@
-# javascript-todo-app12
-ewjwndvsk
+A simple and interactive To-Do List application built using HTML, CSS, and vanilla JavaScript. The application allows users to create, view, edit, complete, and delete tasks through dynamic DOM manipulation and event handling. Tasks can be filtered by All, Active, and Completed status, making task management more organized and efficient. Browser localStorage is used to persist tasks between page refreshes without requiring a backend server. The project demonstrates CRUD operations, JavaScript functions, event delegation, state management, and local data persistence. Its responsive interface provides an accessible and user-friendly way to organize everyday tasks while practising essential frontend development concepts.
