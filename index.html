@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 3 – JavaScript To-Do List</title>
+  <meta name="description" content="A client-side to-do list with CRUD, filters and localStorage persistence.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Today’s tasks</h1>
+      <p class="date" id="today"></p>
+    </header>
+
+    <form class="add-form" id="add-form" autocomplete="off">
+      <label class="visually-hidden" for="new-task">New task</label>
+      <input type="text" id="new-task" placeholder="What needs doing?" maxlength="120" required>
+      <button type="submit" class="btn btn-primary">Add task</button>
+    </form>
+    <p class="form-error" id="form-error" role="alert" hidden></p>
+
+    <section class="panel" aria-labelledby="list-heading">
+      <h2 class="visually-hidden" id="list-heading">Task list</h2>
+
+      <div class="toolbar">
+        <nav class="filters" id="filters" aria-label="Filter tasks">
+          <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter" data-filter="active" aria-pressed="false">Active</button>
+          <button type="button" class="filter" data-filter="completed" aria-pressed="false">Completed</button>
+        </nav>
+        <button type="button" class="btn btn-quiet" id="toggle-all">Mark all done</button>
+      </div>
+
+      <ul class="task-list" id="task-list"></ul>
+
+      <p class="empty" id="empty" hidden></p>
+
+      <footer class="panel-footer">
+        <span id="count" aria-live="polite">0 tasks left</span>
+        <button type="button" class="btn btn-quiet" id="clear-completed">Clear completed</button>
+      </footer>
+    </section>
+
+    <p class="hint">Double-click a task to edit it. Press Enter to save, Esc to cancel.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
